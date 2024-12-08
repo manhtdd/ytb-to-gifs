@@ -1,0 +1,10 @@
+services:
+  ffmpeg:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ffmpeg-container
+    volumes:
+      - ./shared:/shared:rw
+    stdin_open: true
+    tty: true
